@@ -1,0 +1,623 @@
+/* style-v2.css — new look (landing page first). Loaded by index.html only for now.
+   Content below is the Homepage Draft v7 CSS, unchanged, so the render matches the draft.
+   style.css stays in place for every page not yet migrated. */
+
+:root{--ink:#151917;--muted:#4e5954;--accent:#244b40;--line:#e8ebe8;--page:#fff;--max:1190px;--text:#3f4944;--text-strong:#303a35;--soft:#f5f7f5;--rule:#9eafa6;color-scheme:light dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{margin:0;background:var(--page);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.58;overflow-wrap:anywhere}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+.wrap{width:min(var(--max),calc(100% - 52px));margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:20;background:var(--page);border-bottom:1px solid var(--line)}
+.header-inner{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.identity{display:block;min-width:0;flex:0 1 auto}
+.identity-name{display:block;font-size:clamp(31px,3.2vw,42px);font-weight:780;letter-spacing:-.055em;line-height:1}
+.identity-tagline{display:block;margin-top:8px;font-size:clamp(12px,1.08vw,14px);font-weight:560;line-height:1.3;color:var(--accent);letter-spacing:0}
+.results-mark{display:flex;align-items:center;gap:6px;margin-top:7px;color:var(--ink);font-size:11.5px;font-weight:650;line-height:1.2;letter-spacing:.01em}
+.results-mark img{display:block;width:19px;height:19px;object-fit:contain;flex:0 0 auto}
+.nav{display:flex;align-items:center;align-self:flex-end;margin-bottom:3px;justify-content:flex-end;gap:clamp(12px,1.45vw,20px);flex:0 0 auto;font-size:12.5px;font-weight:680;white-space:nowrap}
+.nav a{padding:7px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-bottom-color:var(--accent)}
+.nav a:focus-visible,.audio-link:focus-visible,.profile-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+main{padding-bottom:0}
+.hero{display:grid;grid-template-columns:minmax(205px,270px) minmax(0,1fr);gap:clamp(30px,5vw,68px);align-items:center;padding:25px 0 18px}
+.portrait-wrap{width:min(100%,270px);aspect-ratio:1/1;justify-self:start;align-self:center;overflow:hidden;border-radius:50%;background:var(--page)}
+.portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 47%;border-radius:50%}
+.hero-copy{min-width:0}
+.eyebrow{font-size:12px;font-style:italic;font-weight:450;line-height:1.45;letter-spacing:0;color:var(--accent);margin:0 0 9px;max-width:900px}
+.hero h1{font-size:clamp(34px,4vw,53px);line-height:1.07;letter-spacing:-.05em;margin:0 0 14px;font-weight:760;max-width:850px;color:var(--ink)}
+.belief{font-size:clamp(16px,1.55vw,19px);line-height:1.5;margin:0;max-width:850px;color:var(--text-strong)}
+.profile-links{display:flex;align-items:center;gap:8px 23px;flex-wrap:wrap;margin-top:15px}
+.audio-link,.profile-link{display:inline-flex;align-items:center;gap:8px;margin:0;color:var(--accent);font-size:12.5px;font-weight:720;padding:0 0 3px;border-bottom:1px solid var(--rule);line-height:1.45}
+.audio-icon{font-size:14px;line-height:1}
+.story{padding:5px 0 8px}
+.story-grid{display:block}
+.story p{margin:0;color:var(--text);font-size:13.35px;line-height:1.62}
+.story p+p{margin-top:12px}
+.story strong{color:var(--ink);font-weight:680}
+.impact-section{padding:6px 0 10px}
+.impact-title-row{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:4px}
+.impact-title-row h2{font-size:clamp(23px,2.4vw,30px);line-height:1.15;letter-spacing:-.035em;font-weight:700;margin:0}
+.impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.impact-item{min-width:0;padding:8px 0 7px;display:flex;align-items:baseline;gap:12px}
+.impact-item strong{font-size:clamp(21px,2vw,27px);letter-spacing:-.045em;line-height:1.1;font-weight:740;color:var(--accent);flex:0 0 auto}
+.impact-item span{font-size:13px;color:var(--text);line-height:1.4}
+.bridge-copy{padding:2px 0 5px}
+.bridge-copy p{margin:0;color:var(--text);font-size:13.35px;line-height:1.6}
+.closing-copy{padding:11px 0 10px;display:block;text-align:left}
+.closing-copy p{font-family:inherit;font-size:clamp(15px,1.35vw,17px);font-style:italic;font-weight:760;line-height:1.4;letter-spacing:-.01em;margin:0;max-width:none;color:var(--ink)}
+.site-footer{padding:9px 0 16px}
+.footer-inner{display:flex;align-items:center;justify-content:center;gap:20px;text-align:center}
+.copyright{font-size:11px;color:var(--muted);display:block;width:100%;text-align:center}
+@media(max-width:1020px){
+ .wrap{width:calc(100% - 40px)}
+ .header-inner{gap:12px 16px;flex-wrap:wrap;align-items:center}
+ .identity{flex:1 1 100%}
+ .identity-name{font-size:clamp(29px,4vw,37px)}
+ .identity-tagline{max-width:100%;font-size:12px}
+ .results-mark{margin-top:6px}
+ .nav{width:100%;align-self:auto;margin:0;justify-content:flex-start;flex-wrap:wrap;white-space:normal;gap:8px 22px;font-size:12px}
+ .hero{grid-template-columns:minmax(185px,230px) minmax(0,1fr);gap:28px}
+ .hero h1{font-size:clamp(30px,4vw,43px)}
+ .story p{font-size:13.1px}
+}
+@media(max-width:700px){
+ html{scroll-padding-top:185px}
+ .wrap{width:calc(100% - 34px)}
+ .header-inner{min-height:0;align-items:flex-start;gap:10px;padding:11px 0 9px}
+ .identity-name{font-size:32px}
+ .identity-tagline{font-size:12px;margin-top:5px;max-width:100%;line-height:1.3}
+ .results-mark{margin-top:6px;font-size:11px;gap:5px}
+ .results-mark img{width:17px;height:17px}
+ .nav{gap:7px 17px;font-size:12px;padding:0}
+ .nav a{padding:3px 0}
+ .hero{grid-template-columns:minmax(120px,34%) minmax(0,1fr);grid-template-areas:"eyebrow eyebrow" "portrait title" "belief belief" "profiles profiles";gap:12px 19px;padding:19px 0 15px;align-items:start}
+ .hero>.portrait-wrap{grid-area:portrait;width:100%;max-width:230px;align-self:start}
+ .hero-copy{display:contents}
+ .hero .eyebrow{grid-area:eyebrow;margin-bottom:-2px;font-size:11.5px}
+ .hero h1{grid-area:title;align-self:center}
+ .hero .belief{grid-area:belief}
+ .profile-links{grid-area:profiles;margin-top:0;gap:8px 18px}
+ .hero h1{font-size:clamp(25px,5.4vw,37px);line-height:1.06;margin:0 0 7px;letter-spacing:-.045em}
+ .belief{font-size:14px;line-height:1.48}
+ .audio-link,.profile-link{font-size:11.5px;align-items:flex-start;line-height:1.35}
+ .story{padding:4px 0 8px}
+ .story p{font-size:12.8px;line-height:1.58}
+ .story p+p{margin-top:10px}
+ .impact-section{padding:7px 0 9px}
+ .impact-title-row{margin-bottom:2px}
+ .impact-title-row h2{font-size:24px}
+ .impact-grid{grid-template-columns:1fr 1fr;gap:0 17px}
+ .impact-item{padding:7px 0;align-items:flex-start;flex-direction:column;gap:3px}
+ .impact-item strong{font-size:23px}
+ .impact-item span{font-size:12px}
+ .bridge-copy{padding:3px 0 4px}
+ .bridge-copy p{font-size:12.8px;line-height:1.56}
+ .closing-copy{padding:10px 0 8px;text-align:left}
+ .closing-copy p{font-size:16px;line-height:1.42}
+ .site-footer{padding:8px 0 14px}
+}
+@media(min-width:1000px){.closing-copy p{white-space:nowrap}}
+@media(max-width:380px){
+ .wrap{width:calc(100% - 28px)}
+ .identity-name{font-size:29px}
+ .identity-tagline{font-size:11.5px;line-height:1.3}
+ .nav{gap:7px 14px;font-size:11.5px}
+ .hero{grid-template-columns:minmax(98px,31%) minmax(0,1fr);gap:11px 14px;padding-top:16px}
+ .hero h1{font-size:clamp(23px,6.5vw,27px);letter-spacing:-.045em}
+ .belief{font-size:12px;line-height:1.45}
+ .audio-link,.profile-link{font-size:10.5px;gap:5px}
+ .impact-grid{gap:0 12px}
+ .impact-item strong{font-size:21px}
+ .closing-copy p{font-size:15px}
+}
+@media(max-width:330px){
+ .hero{grid-template-columns:1fr;grid-template-areas:"eyebrow" "portrait" "title" "belief" "profiles";gap:10px}
+ .hero>.portrait-wrap{width:175px}
+ .hero h1{font-size:30px}
+ .hero .eyebrow{font-size:11px}
+ .belief{font-size:13px}
+}
+
+
+/* Version 5: exact original logo composition, reused without separating or redrawing it. */
+.header-inner{gap:clamp(12px,1.7vw,22px)}
+.identity{order:0;flex:0 1 auto}
+.nav{order:1;margin-left:auto}
+.brand-logo{order:2;display:block;flex:0 0 80px;width:80px;height:80px;line-height:0;color:inherit}
+.brand-logo svg{display:block;width:80px;height:80px;overflow:visible}
+.brand-logo:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(max-width:1020px){
+ .header-inner{gap:10px 14px}
+ .identity{order:0;flex:1 1 calc(100% - 94px);min-width:0}
+ .brand-logo{order:1;flex:0 0 80px;width:80px;height:80px}
+ .nav{order:2;width:100%;margin-left:0}
+}
+@media(max-width:700px){
+ .header-inner{gap:9px 12px}
+ .identity{flex:1 1 calc(100% - 92px)}
+ .identity-name{font-size:32px}
+ .identity-tagline{max-width:100%;font-size:12px;line-height:1.28}
+ .brand-logo,.brand-logo svg{width:80px;height:80px}
+ .nav{width:100%;gap:7px 17px}
+ .profile-links{gap:8px 18px}
+ .audio-link,.profile-link{font-size:11.5px}
+}
+@media(max-width:380px){
+ .identity-name{font-size:29px}
+ .identity-tagline{font-size:11.5px;line-height:1.3}
+ .identity{flex-basis:calc(100% - 92px)}
+ .nav{gap:7px 14px;font-size:11.5px}
+}
+
+
+/* Version 6 refinements: give the articulation statement the same type scale as the main belief paragraph. */
+.hero .eyebrow{
+  font-size:clamp(16px,1.55vw,19px);
+  line-height:1.5;
+  font-style:italic;
+  font-weight:450;
+  margin-bottom:9px;
+  max-width:900px;
+}
+/* Make the connecting-the-dots paragraph read as a deliberate closing thought. */
+.bridge-copy p{font-style:italic}
+/* Preserve the compact desktop composition after increasing the articulation text size. */
+@media(min-width:1021px){.hero{padding-top:18px;padding-bottom:8px}}
+@media(max-width:700px){
+  .hero .eyebrow{font-size:14px;line-height:1.48;margin-bottom:-2px}
+}
+@media(max-width:380px){
+  .hero .eyebrow{font-size:12px;line-height:1.45}
+}
+@media(max-width:330px){
+  .hero .eyebrow{font-size:13px;line-height:1.45}
+}
+
+
+/* Version 7: align the hero headline with the complete LinkedIn positioning statement. */
+.hero h1{
+  font-size:clamp(17px,1.46vw,21px);
+  line-height:1.38;
+  letter-spacing:-.018em;
+  font-weight:720;
+  max-width:1000px;
+  margin:0 0 12px;
+  color:var(--ink);
+}
+/* Shortened closure keeps the connecting-the-dots thought on one line at desktop sizes. */
+.bridge-copy p{
+  font-size:13.1px;
+  line-height:1.5;
+  font-style:italic;
+}
+@media(max-width:1020px){
+  .hero h1{font-size:18px;line-height:1.42;margin-bottom:10px}
+}
+@media(max-width:700px){
+  .hero{
+    grid-template-areas:"eyebrow eyebrow" "title title" "portrait belief" "profiles profiles";
+    gap:10px 16px;
+  }
+  .hero h1{grid-area:title;font-size:clamp(17px,4.5vw,19px);line-height:1.42;letter-spacing:-.015em;margin:0}
+  .hero .belief{align-self:center}
+  .bridge-copy p{font-size:12.8px;line-height:1.55}
+}
+@media(max-width:380px){
+  .hero h1{font-size:16px;line-height:1.42}
+  .bridge-copy p{font-size:12.3px}
+}
+@media(max-width:330px){
+  .hero{
+    grid-template-columns:1fr;
+    grid-template-areas:"eyebrow" "title" "portrait" "belief" "profiles";
+    gap:10px;
+  }
+  .hero h1{font-size:17px;line-height:1.4}
+}
+
+
+/* Compact desktop-height profile: preserve the single-screen layout on shorter desktop viewports. */
+@media (min-width:1021px) and (max-height:850px){
+  .hero{grid-template-columns:minmax(205px,235px) minmax(0,1fr);gap:clamp(24px,3.5vw,45px);padding-top:12px;padding-bottom:5px}
+  .portrait-wrap{width:min(100%,235px)}
+  .hero .eyebrow{font-size:clamp(15px,1.35vw,17px);line-height:1.42;margin-bottom:6px}
+  .hero h1{font-size:clamp(17px,1.4vw,19px);line-height:1.32;margin-bottom:8px}
+  .belief{font-size:clamp(15px,1.35vw,17px);line-height:1.4}
+  .profile-links{margin-top:10px}
+  .story{padding-top:2px;padding-bottom:4px}
+  .story p{font-size:12.6px;line-height:1.45}
+  .story p+p{margin-top:7px}
+  .impact-section{padding-top:3px;padding-bottom:4px}
+  .impact-title-row h2{font-size:25px}
+  .impact-item{padding:5px 0 4px}
+  .impact-item strong{font-size:clamp(20px,1.8vw,24px)}
+  .bridge-copy{padding-top:1px;padding-bottom:2px}
+  .bridge-copy p{font-size:12.6px;line-height:1.4}
+  .closing-copy{padding:7px 0 5px}
+  .closing-copy p{font-size:15px;line-height:1.3}
+  .site-footer{padding:4px 0 6px}
+}
+
+/* Logo caption ("Addicted to Results"): colour and font now live here instead of inline in index.html. */
+.brand-logo text{fill:#1F3A63;font-family:'Work Sans',sans-serif}
+
+/* Homepage round 2 ------------------------------------------------------
+   1) One shared size for the "Humanizing AI | ..." headline and the "Impact snapshot" title.
+      Change --title-size to resize both together. */
+:root{--title-size:clamp(17px,1.46vw,21px)}
+@media (min-width:1021px) and (max-height:850px){:root{--title-size:clamp(17px,1.4vw,19px)}}
+@media(max-width:1020px){:root{--title-size:18px}}
+@media(max-width:700px){:root{--title-size:clamp(17px,4.5vw,19px)}}
+@media(max-width:380px){:root{--title-size:16px}}
+@media(max-width:330px){:root{--title-size:17px}}
+.hero h1,
+.impact-title-row h2{font-size:var(--title-size)}
+
+/* 2) Narrative paragraphs under "Audio profile / One-pager profile": larger for readability. */
+.story p{font-size:var(--story-size)}
+
+/* Homepage round 3 ------------------------------------------------------
+   1) Impact points: each point is one sentence with the figure in bold, at the same size as the two
+      narrative paragraphs above them (--story-size, defined in round 5 below). --belief-size sizes the
+      "I architect AI-enabled..." paragraph and the two closing lines. */
+:root{--belief-size:clamp(16px,1.55vw,19px)}
+@media (min-width:1021px) and (max-height:850px){:root{--belief-size:clamp(15px,1.35vw,17px)}}
+@media(max-width:700px){:root{--belief-size:14px}}
+@media(max-width:380px){:root{--belief-size:12px}}
+@media(max-width:330px){:root{--belief-size:13px}}
+.belief{font-size:var(--belief-size)}
+.impact-item{font-size:var(--story-size)}
+.impact-item{display:block;line-height:1.35;color:var(--text)}
+.impact-item strong{font-size:inherit;line-height:inherit}
+
+/* 2) More room between "Audio profile" and "One-pager profile". */
+.profile-links{column-gap:38px}
+@media(max-width:1020px){.profile-links{column-gap:28px}}
+
+/* Homepage round 4 ------------------------------------------------------
+   The two closing lines ("Across Industries..." and "Technology creates possibilities...") use the same
+   size as the "I architect AI-enabled..." paragraph (--belief-size). The one-line lock is released so a
+   longer line wraps instead of running off the page. */
+.bridge-copy p,
+.closing-copy p{font-size:var(--belief-size)}
+@media(min-width:1000px){.closing-copy p{white-space:normal}}
+
+/* Homepage round 5 ------------------------------------------------------
+   One shared size for the two narrative paragraphs and the eight impact points.
+   Change --story-size to resize them together. */
+:root{--story-size:18px}
+@media (min-width:1021px) and (max-height:850px){:root{--story-size:16px}}
+@media(max-width:1020px){:root{--story-size:16.5px}}
+@media(max-width:700px){:root{--story-size:15px}}
+
+/* One-pager profile page (onepager.html) ---------------------------------
+   Reuses the landing page header, footer and .story text. Only page-level spacing is added here:
+   some air under the header, the footer kept at the bottom of tall screens, and a screen-reader-only h1. */
+.onepager-page{min-height:100vh;display:flex;flex-direction:column}
+.onepager-page main{flex:1 0 auto}
+.onepager-page .story{padding-top:16px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* One-pager page, round 2: closing line and the profile downloads ---------
+   The closing line sits at the same distance from the text as the paragraphs sit from each other. */
+.onepager-page .bridge-copy{padding-top:4px}
+.onepager-downloads{padding:8px 0 0}
+.onepager-downloads .profile-links{margin-top:0}
+.onepager-downloads .profile-link{font-size:15px;line-height:1.45}
+
+/* One-pager page, round 3: footer sits right under the links ---- */
+.onepager-page .site-footer{padding:2px 0 10px}
+
+/* My Work page (mywork.html) ----------------------------------------------------
+   A hub: lead line, three tiles in a row, AI-Enabled Work as a full-width band, then the recognition row.
+   One type scale for the page: titles --title-size (21px), lead --belief-size (19px),
+   body --story-size (18px, same as the home page text), secondary 15px (links, recognition). */
+.nav a[aria-current="page"]{border-bottom-color:var(--accent)}
+.mywork-page{min-height:100vh;display:flex;flex-direction:column}
+.mywork-page main{flex:1 0 auto;padding-top:18px}
+.mywork-intro{max-width:none;margin:0 0 4px}
+.work-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 36px;align-items:stretch;padding:14px 0 8px}
+.work-tile{display:flex;flex-direction:column;min-width:0;border-top:1px solid var(--line);padding-top:12px}
+.work-tile--wide{grid-column:1/-1}
+.work-tile h2{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;margin:0 0 8px;color:var(--ink)}
+.work-tile ul{list-style:none;margin:0 0 6px;padding:0;font-size:var(--story-size);line-height:1.45;color:var(--text)}
+.work-tile li{position:relative;padding-left:16px;margin:0 0 6px}
+.work-tile li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.work-tile--wide ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px}
+.work-tile--wide li{margin:0}
+.tile-link{align-self:flex-start;margin-top:auto;font-size:15px;font-weight:680;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.tile-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.tile-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(max-width:1023px){
+  .work-tiles{grid-template-columns:1fr}
+  .work-tile--wide ul{grid-template-columns:1fr}
+  .work-tile--wide li{margin:0 0 6px}
+}
+
+.recognition-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-top:1px solid var(--line);padding:12px 0 6px;margin-top:6px}
+.recognition-item b{display:block;font-size:15px;color:var(--ink);line-height:1.3;margin-bottom:2px}
+.recognition-item span{display:block;font-size:15px;color:var(--muted);line-height:1.4}
+@media(max-width:1023px){.recognition-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px}}
+@media(max-width:560px){.recognition-row{grid-template-columns:1fr}}
+
+/* Sub-pages: gtm.html, solution.html, delivery.html, ai.html -------------------------------------
+   Same header and footer as My Work. Page title, three summary lines (same wording as the My Work tile),
+   Key Highlights cards (two per view on desktop, swipe on phones; driven by subpage.js, unchanged),
+   then three additional highlights. Card text 16px (15px on phones); everything else uses the shared sizes. */
+.sub-page{min-height:100vh;display:flex;flex-direction:column}
+.sub-page main{flex:1 0 auto;padding-top:18px}
+.sub-page-title{font-size:var(--belief-size);line-height:1.25;letter-spacing:-.03em;font-weight:760;margin:0 0 8px;color:var(--ink)}
+.sub-summary{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;font-size:var(--story-size);line-height:1.45;color:var(--text)}
+.sub-summary li,.sub-card li{position:relative;padding-left:16px}
+.sub-summary li::before,.sub-card li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.sub-section{padding-top:16px}
+.sub-section-title{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;margin:0 0 8px;color:var(--ink)}
+.sub-carousel-desktop{display:flex;flex-direction:column}
+.sub-carousel-mobile{display:none}
+.sub-page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;align-items:start}
+.sub-card{min-width:0;border-top:1px solid var(--line);padding-top:12px;font-size:16px;line-height:1.5;color:var(--text)}
+.sub-card h3{font-size:17px;line-height:1.3;letter-spacing:-.02em;font-weight:720;margin:0 0 4px;color:var(--ink)}
+.sub-mandate{font-size:15px;line-height:1.4;font-style:italic;font-weight:650;color:var(--accent);margin:0 0 8px}
+.sub-narrative{margin:0 0 8px}
+.sub-card ul{list-style:none;margin:0 0 8px;padding:0}
+.sub-card li{margin:0 0 6px}
+.sub-outcome{font-size:15px;line-height:1.4;font-weight:680;color:var(--accent);border-top:1px solid var(--line);padding-top:8px}
+.sub-carousel-nav,.sub-mobile-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0 4px}
+.sub-carousel-nav-controls{display:flex;align-items:center;gap:14px}
+.sub-arrow{font:inherit;font-size:18px;line-height:1;color:var(--accent);background:none;border:1px solid var(--line);border-radius:50%;width:34px;height:34px;cursor:pointer}
+.sub-arrow:hover{border-color:var(--accent)}
+.sub-arrow:focus-visible,.sub-swipe-sidebar:focus-visible,.back-to-main-inline:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.sub-counter,.sub-swipe-counter{font-size:15px;color:var(--muted);min-width:44px;text-align:center}
+.back-to-main-inline{font-size:15px;font-weight:680;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.back-to-main-inline:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px}
+.extra-box{border-top:1px solid var(--line);padding-top:10px;font-size:15px;line-height:1.45;color:var(--text)}
+.sub-page .site-footer{padding-top:14px}
+@media(max-width:1023px){
+  .sub-summary{grid-template-columns:1fr}
+  .sub-summary li{margin:0 0 6px}
+  .sub-carousel-desktop{display:none}
+  .sub-carousel-mobile{display:block}
+  .extra-grid{grid-template-columns:1fr;gap:12px 0}
+  .sub-card{font-size:15px}
+  .sub-swipe-wrapper{display:flex;align-items:stretch;gap:4px}
+  .sub-swipe-sidebar{flex:0 0 26px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:20px;cursor:pointer;user-select:none;-webkit-user-select:none}
+  .sub-swipe-viewport{flex:1 1 auto;min-width:0;overflow:hidden}
+  .sub-swipe-track{display:flex;align-items:flex-start;transition:transform .3s ease}
+  .sub-swipe-card{flex:0 0 100%;min-width:0}
+}
+
+/* Sub-pages, round 2: line-up across the two cards on desktop ---------------------------------------
+   Each card spans seven shared rows (title, objective, narrative, three bullets, outcome), so the objective,
+   narrative, each bullet and the outcome line start at the same height in both cards. The objective is
+   one line in normal weight (a longer one is cut with "…" on desktop, so shorten the wording).
+   Phones are unaffected: the swipe cards stay as plain stacked blocks. */
+@media(min-width:1024px){
+  .sub-page-grid{row-gap:0}
+  .sub-page-grid .sub-card{display:grid;grid-row:span 7;grid-template-rows:subgrid;align-content:start}
+  .sub-page-grid .sub-card ul{display:grid;grid-row:span 3;grid-template-rows:subgrid;margin:0}
+  .sub-page-grid .sub-card li{margin:0 0 6px}
+  .sub-page-grid .sub-mandate{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+.sub-mandate{font-weight:400}
+
+/* Sub-pages, round 3: tighter vertical spacing so the footer line fits in a 1080p window (desktop only) -------- */
+@media(min-width:1024px){
+  .sub-page main{padding-top:12px}
+  .sub-page-title{margin-bottom:6px}
+  .sub-section{padding-top:10px}
+  .sub-section-title{margin-bottom:6px}
+  .sub-card{padding-top:10px}
+  .sub-card h3{margin-bottom:3px}
+  .sub-mandate{margin-bottom:6px}
+  .sub-narrative{margin-bottom:6px}
+  .sub-page-grid .sub-card li{margin-bottom:4px}
+  .sub-outcome{padding-top:6px}
+  .sub-carousel-nav{padding:8px 0 2px}
+  .extra-box{padding-top:8px}
+  .sub-page .site-footer{padding:6px 0 8px}
+}
+
+/* My Blogs index (blogs.html) ----------------------------------------------------------------------
+   Same markup and script as before; only the look changes. The page now scrolls like the other pages
+   (sticky header), and the series rows, edition lists and essay cards use the shared type scale:
+   row names --title-size, everything else 15 to 16px. Edition and series pages still use style.css for now. */
+.blogs-page{min-height:100vh;display:flex;flex-direction:column}
+.blogs-page main{flex:1 0 auto;padding-top:18px;padding-bottom:10px}
+.blogs-title{font-size:var(--belief-size);line-height:1.25;letter-spacing:-.03em;font-weight:760;margin:0 0 10px;color:var(--ink)}
+.blogs-segment{margin:0 0 10px}
+.blogs-segment.acc{border:1px solid var(--line);border-radius:8px;transition:border-color .15s}
+.blogs-segment.acc.is-open{border-color:var(--rule)}
+.acc-head{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:56px;padding:10px 16px;font:inherit;color:var(--ink);text-align:left;background:transparent;border:0;border-radius:8px;cursor:pointer;transition:background .15s}
+.acc-head:hover{background:var(--soft)}
+.acc-head:focus-visible,.ser-head:focus-visible,.blogs-card:focus-visible,.acc-foot a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.acc-main{display:flex;flex-direction:column;min-width:0}
+.acc-name{font-size:var(--title-size);font-weight:720;letter-spacing:-.03em;line-height:1.25;color:var(--ink)}
+.acc-tag{margin-left:12px;font-size:15px;font-weight:450;letter-spacing:0;color:var(--muted)}
+.acc-side{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.acc-count{font-size:15px;color:var(--muted);white-space:nowrap}
+.acc-chev{width:9px;height:9px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+.is-open>.acc-head .acc-chev{transform:rotate(-135deg) translate(-2px,-2px)}
+.acc-panel{display:none;padding:6px 16px 16px;border-top:1px solid var(--line)}
+.is-open>.acc-panel{display:block}
+.acc-foot{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:14px}
+.acc-foot a{font-size:15px;font-weight:680;color:var(--accent)}
+.acc-foot a:hover{color:var(--ink)}
+.ser{border-top:1px solid var(--line)}
+.ser-head{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:50px;padding:8px 16px 8px 28px;font:inherit;font-size:16px;font-weight:650;color:var(--ink);text-align:left;background:transparent;border:0;cursor:pointer}
+.ser-head:hover{background:var(--soft)}
+.ser-panel{display:none;padding:6px 16px 16px}
+.ser.is-open>.ser-panel{display:block}
+.ser.is-open>.ser-head .acc-chev{transform:rotate(-135deg) translate(-2px,-2px)}
+.nl>.acc-panel{padding:0}
+.nl>.acc-panel>.ser:first-child{border-top:0}
+.nl .acc-foot{margin:0;padding:8px 16px 12px;border-top:1px solid var(--line)}
+.blogs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px}
+.blogs-card{display:flex;align-items:center;min-height:56px;padding:9px 14px;border:1px solid var(--line);border-radius:8px;color:var(--ink);font-size:16px;line-height:1.35;background:var(--page);transition:border-color .15s,background .15s}
+.blogs-card:hover{border-color:var(--rule);background:var(--soft);color:var(--ink)}
+.blogs-card-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-weight:560}
+.blogs-card.is-static{color:var(--muted);cursor:default}
+.blogs-card.is-static:hover{border-color:var(--line);background:var(--page);color:var(--muted)}
+@media(max-width:1023px){.blogs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .acc-tag{display:none}
+  .acc-head{padding:10px 14px}
+  .ser-head{padding-left:22px}
+  .acc-panel,.ser-panel{padding-left:12px;padding-right:12px}
+  .nl .acc-foot{padding-left:12px;padding-right:12px}
+}
+@media(max-width:560px){.blogs-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.acc-chev,.acc-head,.ser-head,.blogs-segment.acc,.blogs-card{transition:none}}
+
+/* Blog edition and article pages (ConnectingTheDots_*, SignalSheet_*, LinkedIn_Post_*) ------------------
+   Same header, type scale and footer as the other migrated pages. Differences by design:
+   - the five links (Connect, E-Mail, Home, Schedule, All Blogs) now sit in the header nav, so the copyright line shows under the card;
+   - the newsletter name (Connecting the Dots / Signal Sheet) sits after "Sharad Kumar" in the header;
+   - edition number left, date right (.blog-meta); headline bold and kept to one line on desktop;
+   - one vertical rhythm: every block is 14px from the next, so no extra white space around paragraphs;
+   - the card scrolls inside the window (as before) with the left/right edition arrows at its sides.
+   Headline font: set in --blog-head-font (first line below); all sizes come from the shared variables. */
+:root{--blog-head-font:'Source Serif 4',Georgia,'Times New Roman',serif}
+body.blog-page{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.blog-page .site-header{flex:0 0 auto}
+.blog-page main{flex:1 1 auto;min-height:0;display:flex}
+.blog-page .site-footer{flex:0 0 auto;padding:6px 0 10px}
+.blog-page .identity-name{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 14px}
+.identity-series{font-size:var(--title-size);font-weight:650;letter-spacing:-.02em;color:var(--accent)}
+
+.blog-carousel-row{width:min(var(--max),calc(100% - 52px));margin-inline:auto;display:flex;align-items:stretch;gap:12px;min-height:0;padding:12px 0 2px}
+.blog-pillar{flex:0 0 44px;display:flex;align-items:center;justify-content:center;font-size:26px;line-height:1;color:var(--accent);border-radius:8px}
+.blog-pillar:hover{background:var(--soft);color:var(--ink)}
+.blog-pillar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.blog-card-window{flex:1 1 auto;min-width:0;overflow-y:auto;padding:0 18px 12px 0;scrollbar-gutter:stable}
+.blog-card-window>*+*{margin-top:14px}
+.blog-card-window strong{color:var(--ink);font-weight:680}
+.blog-top-rule{height:2px;background:var(--ink)}
+.blog-bottom-rule{height:1px;background:var(--line)}
+
+.blog-meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;font-weight:680;line-height:1.3;color:var(--accent)}
+.blog-meta .blog-date{font-weight:450;color:var(--muted);text-align:right}
+.blog-header{margin-top:8px}
+.blog-headline{font-family:var(--blog-head-font);font-size:clamp(22px,2.3vw,30px);font-weight:700;line-height:1.2;letter-spacing:-.01em;margin:0;color:var(--ink)}
+.blog-headline em{font-style:italic;color:var(--accent)}
+.blog-subhead{margin:6px 0 0;font-size:var(--belief-size);line-height:1.4;color:var(--muted)}
+
+.blog-closing{padding:0;border:0}
+.blog-closing-text{margin:0;font-size:var(--story-size);line-height:1.5;color:var(--text)}
+.blog-pull-quote{display:flex;gap:16px;align-items:stretch}
+.blog-bar{flex:0 0 3px;background:var(--accent);border-radius:2px}
+.blog-pull-quote p{margin:0;font-size:var(--belief-size);line-height:1.45;font-style:italic;font-weight:560;color:var(--ink)}
+
+.blog-section-label,.blog-shift-label{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;color:var(--ink)}
+.blog-section-label em,.blog-shift-label em{font-style:normal}
+.blog-section-label+*{margin-top:8px}
+
+.blog-exemplar{border-top:1px solid var(--line);padding-top:10px}
+.blog-org-name{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;color:var(--ink);margin:0 0 6px}
+.blog-metric-line{position:relative;padding-left:16px;margin:0 0 5px;font-size:var(--story-size);line-height:1.45;color:var(--text)}
+.blog-metric-line:last-child{margin-bottom:0}
+.blog-metric-line::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+.blog-shift-block{border-top:1px solid var(--line);padding-top:10px}
+.blog-shift-label{margin:0 0 8px}
+.blog-shift-compare{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:0 20px;align-items:start}
+.blog-shift-era{font-size:15px;font-weight:720;color:var(--accent);margin:0 0 3px}
+.blog-shift-q{font-size:var(--story-size);line-height:1.45;color:var(--text)}
+.blog-arrow-mid{font-size:26px;line-height:1;color:var(--accent);align-self:center}
+
+.blog-timeline{border-top:1px solid var(--line)}
+.blog-timeline-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:0 20px;padding:8px 0;border-bottom:1px solid var(--line)}
+.blog-era{font-size:var(--title-size);line-height:1.3;letter-spacing:-.03em;font-weight:720;color:var(--accent)}
+.blog-era-desc{font-size:var(--story-size);line-height:1.45;color:var(--text)}
+
+.blog-forces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px}
+.blog-force-item{border-top:1px solid var(--line);padding-top:10px}
+.blog-force-label{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;color:var(--ink);margin:0 0 4px}
+.blog-force-text{font-size:var(--story-size);line-height:1.45;color:var(--text)}
+
+.blog-spotlight{border:1px solid var(--line);border-radius:8px;padding:12px 16px}
+.blog-spotlight-label{font-size:13px;font-weight:680;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
+.blog-spotlight-org{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;color:var(--ink);margin:0 0 6px}
+.blog-spotlight-text{font-size:var(--story-size);line-height:1.45;color:var(--text)}
+
+.blog-signature{margin-top:18px;font-size:var(--belief-size);line-height:1.4;font-style:italic;font-weight:700;letter-spacing:-.01em;color:var(--accent)}
+
+@media(max-width:1023px){
+  .blog-forces{grid-template-columns:1fr;gap:12px 0}
+}
+@media(max-width:700px){
+  .blog-carousel-row{width:calc(100% - 34px);gap:6px;padding-top:8px}
+  .blog-pillar{flex-basis:28px;font-size:22px}
+  .blog-card-window{padding-right:6px}
+  .blog-shift-compare{grid-template-columns:1fr;gap:8px 0}
+  .blog-arrow-mid{transform:rotate(90deg);justify-self:start;margin-left:6px}
+  .blog-timeline-row{grid-template-columns:1fr;gap:2px 0}
+  .blog-headline{font-size:clamp(20px,5.6vw,24px)}
+}
+
+/* Blog pages, additions: "Read this edition on LinkedIn" link and the two-column comparison table ---------- */
+.blog-readlink{font-weight:680;color:var(--accent)}
+.blog-readlink:hover{color:var(--ink)}
+.blog-compare-table{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr) minmax(0,1fr);gap:0 24px}
+.bct-head{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;color:var(--accent);padding-bottom:6px}
+.bct-row-label,.bct-cell{border-top:1px solid var(--line);padding:8px 0;font-size:var(--story-size);line-height:1.45}
+.bct-row-label{font-weight:720;color:var(--ink)}
+.bct-cell{color:var(--text)}
+@media(max-width:700px){
+  .blog-compare-table{grid-template-columns:1fr;gap:0}
+  .bct-head{display:none}
+  .bct-row-label{padding-bottom:2px}
+  .bct-cell{border-top:0;padding:2px 0 6px}
+  .bct-cell::before{display:block;font-size:13px;font-weight:680;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+  .bct-cell:nth-child(3n+2)::before{content:"Claude · Anthropic"}
+  .bct-cell:nth-child(3n+3)::before{content:"ChatGPT · OpenAI"}
+}
+
+/* Newsletter pages: "Subscribe" link in the header navigation */
+.nav a.nav-subscribe{color:var(--accent)}
+.nav a.nav-subscribe:hover{color:var(--ink)}
+
+/* My Blogs index: edition cards are plain one-liners (normal weight, one line, longer titles end with "…") */
+.blogs-card.is-edition{min-height:44px;padding-top:6px;padding-bottom:6px}
+.blogs-card.is-edition .blogs-card-title{font-weight:400;-webkit-line-clamp:1;line-clamp:1}
+
+/* Blog pages on a phone in portrait: header stays tidy and the nav fits on one line */
+@media(max-width:560px){
+  .blog-page .identity-tagline{display:none}
+  .blog-page .identity-name{display:block}
+  .blog-page .identity-series{display:block;font-size:16px;margin-top:2px}
+  .blog-page .nav a[href*="linkedin.com/in/"]{display:none}
+}
+
+/* Hidden for now: "Read this edition on LinkedIn" (Signal Sheet E2 and E4). Delete these two lines to bring it back. */
+.blog-closing:has(.blog-readlink){display:none}
+.blog-readlink{display:none}
+
+/* Dark mode: follows the visitor's device or browser setting (always dark, or automatic sunset to sunrise).
+   Only the colour values change; nothing else on any page is affected. */
+@media (prefers-color-scheme: dark){
+  :root{--ink:#e8ece9;--muted:#a9b5af;--accent:#8fc4b0;--line:#2b332f;--page:#121614;--text:#c9d2cd;--text-strong:#d8dfda;--soft:#1b211e;--rule:#4a5d54}
+  .brand-logo svg{background:#eef1ee;border-radius:50%}
+}
+
+/* E-Mail chooser (site.js), shown on laptops and desktops only */
+.mail-menu{position:absolute;z-index:100;min-width:210px;background:var(--page);border:1px solid var(--line);border-radius:8px;padding:6px;box-shadow:0 6px 22px rgba(0,0,0,.18)}
+.mail-menu button{display:block;width:100%;text-align:left;font:inherit;font-size:15px;color:var(--ink);background:none;border:0;border-radius:6px;padding:8px 10px;cursor:pointer}
+.mail-menu button:hover,.mail-menu button:focus-visible{background:var(--soft);outline:none}
+
+/* My Blogs index: when a newsletter row is open, the header shows its name and a Subscribe link, as on the edition pages */
+.blogs-page .identity-name{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 14px}
+.nav a.nav-subscribe{color:var(--accent)}
+@media(max-width:560px){
+  .blogs-page.has-series .identity-tagline{display:none}
+  .blogs-page.has-series .identity-name{display:block}
+  .blogs-page.has-series .identity-series{display:block;font-size:16px;margin-top:2px}
+  .blogs-page.has-series .nav a[href*="linkedin.com/in/"]{display:none}
+}
+
+/* "No mail app detected?" hint (site.js) */
+.mail-menu.mail-hint{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;max-width:340px;min-width:0;padding:10px 12px;font-size:15px;color:var(--text)}
+.mail-menu.mail-hint button{display:inline;width:auto;padding:2px 4px;font-size:15px;font-weight:680;color:var(--accent);text-decoration:underline;text-underline-offset:3px;background:none}
+.mail-menu.mail-hint button:hover,.mail-menu.mail-hint button:focus-visible{background:none;color:var(--ink)}
