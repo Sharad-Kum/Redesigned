@@ -327,8 +327,8 @@ main{padding-bottom:0}
 .work-tile li::before{content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 .work-tile--wide ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px}
 .work-tile--wide li{margin:0}
-.tile-link{align-self:flex-start;margin-top:auto;font-size:15px;font-weight:680;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
-.tile-link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.tile-link{align-self:flex-start;margin-top:auto;font-size:15px;font-weight:680;color:var(--accent);padding-bottom:2px}
+.tile-link:hover{color:var(--ink)}
 .tile-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 @media(max-width:1023px){
   .work-tiles{grid-template-columns:1fr}
@@ -336,11 +336,13 @@ main{padding-bottom:0}
   .work-tile--wide li{margin:0 0 6px}
 }
 
-.recognition-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-top:1px solid var(--line);padding:12px 0 6px;margin-top:6px}
+.recognition-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-top:0;padding:0 0 6px;margin-top:0}
 .recognition-item b{display:block;font-size:15px;color:var(--ink);line-height:1.3;margin-bottom:2px}
 .recognition-item span{display:block;font-size:15px;color:var(--muted);line-height:1.4}
 @media(max-width:1023px){.recognition-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px}}
 @media(max-width:560px){.recognition-row{grid-template-columns:1fr}}
+.recognition{border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+.recognition h2{font-size:var(--title-size);line-height:1.2;letter-spacing:-.03em;font-weight:720;margin:0 0 8px;color:var(--ink)}
 
 /* Sub-pages: gtm.html, solution.html, delivery.html, ai.html -------------------------------------
    Same header and footer as My Work. Page title, three summary lines (same wording as the My Work tile),
@@ -370,8 +372,8 @@ main{padding-bottom:0}
 .sub-arrow:hover{border-color:var(--accent)}
 .sub-arrow:focus-visible,.sub-swipe-sidebar:focus-visible,.back-to-main-inline:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .sub-counter,.sub-swipe-counter{font-size:15px;color:var(--muted);min-width:44px;text-align:center}
-.back-to-main-inline{font-size:15px;font-weight:680;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
-.back-to-main-inline:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.back-to-main-inline{font-size:15px;font-weight:680;color:var(--accent);padding-bottom:2px}
+.back-to-main-inline:hover{color:var(--ink)}
 .extra-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px}
 .extra-box{border-top:1px solid var(--line);padding-top:10px;font-size:15px;line-height:1.45;color:var(--text)}
 .sub-page .site-footer{padding-top:14px}
@@ -621,3 +623,5 @@ body.blog-page{height:100vh;height:100dvh;display:flex;flex-direction:column;ove
 .mail-menu.mail-hint{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;max-width:340px;min-width:0;padding:10px 12px;font-size:15px;color:var(--text)}
 .mail-menu.mail-hint button{display:inline;width:auto;padding:2px 4px;font-size:15px;font-weight:680;color:var(--accent);text-decoration:underline;text-underline-offset:3px;background:none}
 .mail-menu.mail-hint button:hover,.mail-menu.mail-hint button:focus-visible{background:none;color:var(--ink)}
+
+@media (max-width:700px) and (orientation:portrait){.brand-logo{display:none}}
