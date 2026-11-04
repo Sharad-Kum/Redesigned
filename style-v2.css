@@ -625,3 +625,5 @@ body.blog-page{height:100vh;height:100dvh;display:flex;flex-direction:column;ove
 .mail-menu.mail-hint button:hover,.mail-menu.mail-hint button:focus-visible{background:none;color:var(--ink)}
 
 @media (max-width:700px) and (orientation:portrait){.brand-logo{display:none}}
+
+.blog-signature { font-weight: 400; }
