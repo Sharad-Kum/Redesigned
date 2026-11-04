@@ -448,7 +448,7 @@ main{padding-bottom:0}
 .acc-foot a{font-size:15px;font-weight:680;color:var(--accent)}
 .acc-foot a:hover{color:var(--ink)}
 .ser{border-top:1px solid var(--line)}
-.ser-head{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:50px;padding:8px 16px 8px 28px;font:inherit;font-size:16px;font-weight:650;color:var(--ink);text-align:left;background:transparent;border:0;cursor:pointer}
+.ser-head{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:50px;padding:8px 16px 8px 28px;font:inherit;font-size:16px;font-weight:400;color:var(--ink);text-align:left;background:transparent;border:0;cursor:pointer}
 .ser-head:hover{background:var(--soft)}
 .ser-panel{display:none;padding:6px 16px 16px}
 .ser.is-open>.ser-panel{display:block}

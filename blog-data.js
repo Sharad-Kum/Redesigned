@@ -17,7 +17,7 @@ const NEWSLETTERS = [
     desc: "Where I interpret: how strategy, functions and technology connect, one short edition at a time.",
     linkedin: "https://www.linkedin.com/newsletters/connecting-the-dots-7500071281342660608",
     sections: [
-      { id: "s1", title: "Series 1: GTM, Sales & Marketing", status: "Complete",
+      { id: "s1", title: "GTM, Sales & Marketing", status: "Complete",
         note: "Six editions on how GTM, Sales and Marketing work as one growth system while each keeps its own questions.",
         editions: [
           {no: "Edition 2", title: "Integration is not an interchange", date: "9 Sep 2026", summary: "A leader can hold more than one hat, but each hat stays distinct.", url: "ConnectingTheDots_S1_E2.html"},
@@ -27,10 +27,11 @@ const NEWSLETTERS = [
           {no: "Edition 6", title: "AI Sits Inside the H", date: "7 Oct 2026", summary: "AI belongs inside the How, not in place of it.", url: "ConnectingTheDots_S1_E6.html"},
           {no: "Edition 7", title: "Seats Still Exist", date: "14 Oct 2026", summary: "A title can merge or split. Questions still need an owner.", url: "ConnectingTheDots_S1_E7.html"}
         ] },
-      { id: "s2", title: "Series 2: AI Platforms", status: "Starts Wed 28 Oct 2026", newestFirst: true,
+      { id: "s2", title: "AI Platforms", status: "Every Wednesday IST", newestFirst: true,
         note: "What has actually changed, what it changes, who supervises these systems, and how roles are shifting.",
         editions: [
-          {no: "Edition 9", title: "AI Platforms: Who Leads", date: "Wed 28 Oct 2026", summary: "The scoreboards disagree on who leads.", url: ""}
+          {no: "Edition 9", title: "AI Platforms: Who Is Deciding the Leadership?", date: "28 Oct 2026", summary: "The scoreboards disagree on who leads.", url: "ConnectingTheDots_S2_E9.html"},
+          {no: "Edition 10", title: "What Decides Leadership?", date: "4 Nov 2026", summary: "Arriving first gives a head start. Leadership goes to whoever does the job better.", url: "ConnectingTheDots_S2_E10.html"}
         ] }
     ]
   },
